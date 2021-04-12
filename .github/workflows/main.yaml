@@ -30,9 +30,10 @@ jobs:
       uses: actions/setup-node@v1
       with:
         node-version: ${{ matrix.node-version }}
-    - run: npm ci
-    - run: npm run lint
-    - run: npm testrun docs -T
+    - run: yarn install
+    - run: yarn check
+    - run: yarn run lint
+    - run: yarn run docs -T
 
   build:
 
